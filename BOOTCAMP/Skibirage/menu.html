@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skibirage deller</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="text-center">Skibirage</h1>
+      <div class="mb-3">
+        <label for="filter" class="form-label" onchange="tampilanBarang()">
+          <select name="" id="filter" class="form-select">
+            <option value="all">all</option>
+            <option value="motor">motor</option>
+            <option value="mobil">mobil</option>
+            <option value="alatberat">alat berat</option>
+          </select>
+        </label>
+      </div>
+      <div id="product-list" class="row"></div>
+    </div>
+
+    <script>
+      const barang = [
+        //motor
+        {
+          nama: "kawasaki Z900 SE",
+          harga: "Rp 219,9 Juta ",
+          kategori: "motor",
+          deskripsi: "Super Sport, Manual, 948 cc, 2 Kursi, 124 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/88/3223/kawasaki-z900-se-13563.jpg",
+        },
+        {
+          nama: "BMW R12 S",
+          harga: "Rp 990 Juta ",
+          kategori: "motor",
+          deskripsi: "Sport, Manual, 1170 cc, 1 Kursi, 109 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/67/3195/bmw-r12-s-50694.jpg",
+        },
+        {
+          nama: "Honda Vario 150",
+          harga: "Rp 24 Juta",
+          kategori: "motor",
+          deskripsi: "Belum Tersedia",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/73/987/honda-vario-125-esp-80430.jpg",
+        },
+
+        //mobil
+        {
+          nama: "mazda 3 hatchback",
+          harga: "Rp. 579.9 jt",
+          kategori: "mobil",
+          deskripsi: "Hatchback, Automatic, 1998 cc, 5 Kursi, 153 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/23/2199/mazda-3-2019-84418.jpg",
+        },
+        {
+          nama: "Toyota Hilux Rangga",
+          harga: "Rp 191,4 - 308,7 Juta",
+          kategori: "mobil",
+          deskripsi: "Pickup Truck, Manual, 2399 cc, 2 Kursi, 150 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/38/2900/toyota-hilux-rangga-92200.jpg",
+        },
+        {
+          nama: "Toyota Fortuner",
+          harga: "Rp 581,1 - 771,9 Juta",
+          kategori: "mobil",
+          deskripsi: "SUV, Manual, 2393 cc, 7 Kursi, 148 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/38/894/toyota-fortuner-97521.jpg",
+        },
+        {
+          nama: "Mitsubishi Pajero",
+          harga: "Rp 577,7 - 779,65 Juta",
+          kategori: "mobil",
+          deskripsi: "SUV, Manual, 2477 cc, 7 Kursi, 134 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/28/2364/mitsubishi-pajero-sport-70257.jpg",
+        },
+        {
+          nama: "Toyota Land Cruiser",
+          harga: "Rp 2,617 - 2,692 Milyar",
+          kategori: "mobil",
+          deskripsi: "Hatchback, Automatic, 1998 cc, 5 Kursi, 153 hp",
+          image:
+            "https://imgcdn.oto.com/medium/gallery/exterior/38/1349/toyota-land-cruiser-26344.jpg",
+        },
+      ];
+
+      function tampilanProduk(pilihBarang) {
+        const barangReady = document.getElementById("product-list");
+        if (pilihBarang.length === 0) {
+          barangReady.innerHTML = `<p class="text-center">Barang Tidak Ready Saat ini</p>`;
+          return;
+        }
+        barangReady.innerHTML = pilihBarang
+          .map(
+            (barang) =>
+              `<div class="col-md-4 md-4">
+                <div class="card">
+                    <img src="${barang.image}" class="card-img-top" alt="${barang.nama}">
+                    <div>
+                        <h5 class="card-title">${barang.nama}</h5>
+                        <p class="card-text">${barang.deskripsi}</p>
+                        <p class="fw-bold">${barang.harga}</p>
+                    </div>
+                </div>
+            </div>`
+          )
+          .join("");
+      }
+
+      function tampilanBarang() {
+        const pilihan = document.getElementById("filter").value;
+        if (pilihan === "all") {
+          tampilanProduk(barang);
+        } else {
+          const filter = barang.filter((barang) => barang.kategori === pilihan);
+          tampilanProduk(filter);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () =>
+        tampilanProduk(barang)
+      );
+    </script>
+  </body>
+</html>

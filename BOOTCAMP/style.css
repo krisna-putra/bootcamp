@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling untuk halaman */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to top, #ededed, #e7ecf0);
+  padding: 20px;
+  color: #1f1f36;
+}
+
+/* Section 1: Menu Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 50px;
+  border-radius: 10px;
+}
+
+nav img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #1f1f36;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.btn-portfolio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6666ff; /* Warna merah */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  margin-left: auto;
+}
+
+.btn-portfolio:hover {
+  background-color: #3737f1; /* Warna merah lebih gelap saat hover */
+}
+
+.btn-instagram {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #6666ff; /* Warna merah */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-instagram:hover {
+  background-color: #3737f1; /* Warna merah lebih gelap saat hover */
+}
+
+/* Section 2: Judul Kiri dan Gambar Kanan */
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.judul {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.judul h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.judul p {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.gambarikuulo {
+  text-align: right;
+  padding-right: 100px;
+}
+
+.gambarikuulo img {
+  max-width: 100%;
+  height: auto;
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 100px;
+}
+
+/* Section 3: Client */
+.Client {
+  margin-top: 40px;
+  justify-items: center;
+}
+
+.Client h2 {
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Client p {
+  padding-bottom: 20px;
+}
+
+.logoclient {
+  display: flex;
+  height: auto;
+  width: 50%;
+  border-radius: 5px;
+  justify-items: center;
+  box-shadow: 10px;
+}
+
+/* Section 4: Portofolio */
+.paket {
+  margin-top: 40px;
+}
+
+.paket h2 {
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio .item {
+  text-align: center;
+}
+
+.portfolio .item img {
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio .item p {
+  font-size: 16px;
+  padding-bottom: 10px;
+}

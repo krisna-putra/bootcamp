@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page - Fullstack Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .hero {
+        height: 100vh;
+        color: rgb(23, 9, 81);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+      .hero img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .project img {
+        transition: transform 0.3s;
+      }
+      .project img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <img
+          class="navbar-brand"
+          href="#"
+          src="img/LOGO IKUULO.png"
+          alt="logo"
+          style="width: 10%"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p style="font-weight: 300">i'm papa zola</p>
+          <h1>Fullstack Developer</h1>
+          <p style="font-style: italic">
+            Membangun solusi digital yang inovatif dan efisien
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img
+            src="img/logo ikuulo hitam.png"
+            alt="Fullstack Developer"
+            style="width: 70%"
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          style="
+            width: auto;
+            background-color: rgb(69, 20, 115);
+            border: none;
+            box-shadow: 30px;
+            margin-left: 10px;
+          "
+        >
+          instagram
+        </button>
+      </div>
+
+      <style>
+        p {
+          margin-bottom: 10px;
+        }
+
+        h1 {
+          font-size: 50px;
+          font-weight: 700;
+        }
+      </style>
+    </header>
+
+    <section id="about" class="container py-5">
+      <h2 class="text-center" style="font-weight: 700; color: rgb(23, 9, 81)">
+        About Me
+      </h2>
+      <p class="text-center">
+        Saya adalah seorang Fullstack Developer dengan pengalaman dalam
+        pengembangan web dan aplikasi.
+      </p>
+      <div class="row mt-4">
+        <div class="col-md-6">
+            <ul class="list-group" style="text-align: center; width: auto;">
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Nama</strong> <br>Papa Zola</li>
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Email</strong> <br>papazolaganteng@example.com</li>
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Telepon</strong> <br> +62 123 1234 4321</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group" style="text-align: center; width: auto;">
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Keahlian</strong> <br>JavaScript, Python, PHP</li>
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Pengalaman</strong> <br>5 Tahun</li>
+                <li class="list-group-item" style="border: none; color: rgb(23, 9, 81); background-color:  #f8f9fa"><strong>Lokasi</strong> <br>Jakarta, Indonesia</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="container py-5">
+      <h2 class="text-center" style="font-weight: 700; color: rgb(23, 9, 81)">
+        Projects
+      </h2>
+      <div class="row">
+        <div class="col-md-4 project">
+          <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/Sequence 01.00_01_09_17.Still005.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_01_22_34.Still014.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_08_21_47.Still035.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/Sequence 01.00_01_09_17.Still005.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_01_22_34.Still014.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_08_21_47.Still035.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/Sequence 01.00_01_09_17.Still005.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_01_22_34.Still014.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/Sequence 01.00_09_26_34.Still050.jpg"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-4 bg-dark text-light">
+      &copy; 2025 Fullstack Developer. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
